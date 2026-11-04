@@ -1,0 +1,4 @@
+{
+  "innhold": "{\n  \"serienummer\": 1,\n  \"produkter\": [\n    {\n      \"id\": \"scoreboard\",\n      \"navn\": \"Scoreboard\",\n      \"utgaver\": {\n        \"windows\": {\n          \"versjon\": \"0.6.5b\",\n          \"url\": \"https://github.com/deejayzett2/hq-utgivelser/releases/download/scoreboard-0.6.5b/scoreboard-0.6.5b-windows.zip\",\n          \"sha256\": \"d3fad36c9e94845527a0e0d3fc6bd2e3e450b66b46cb302a05a0948d21d49e29\",\n          \"storrelse\": 9725874,\n          \"start\": \"Scoreboard.exe\"\n        }\n      }\n    }\n  ]\n}",
+  "signatur": "lzYp4/fQqfQDh8zZvouJjM3ZtW7CXe6nXtFF1fntr5UK2NoCnKqnuqf+4iIaG041B+/qBjzaIv7LEHfESGPnDQ=="
+}
