@@ -48,6 +48,27 @@ Under **Sport** velger du sport. Det fyller inn standardreglene, som du kan just
 - **Resultater:** hver kamp logges når den avsluttes, og kan eksporteres til Excel.
 - **Nedtelling før kampstart:** sett «Kampstart om» (for eksempel 40:00) og trykk Start.
 
+## Kampjournal (alle kampdata)
+Fra versjon 0.6.7b lagres alt som skjer i hver kamp automatisk, mens kampen pågår. Du trenger ikke slå noe på.
+
+- **Hva som lagres:** lag og roster, og hver handling med klokkeslett, kampklokke, periode og navn: mål og poeng,
+  kort, utvisninger, bytter, timeouts, start og stopp, pauser, klokkejusteringer, dommeravgjørelser, angre og det
+  som vises på skjermen. Stillingen etter hver handling kommer også med.
+- **Hvor:** mappen `kamper` i Scoreboards datamappe, sortert på dato. Under **Innstillinger → Kampmappe** kan du
+  velge en annen mappe, for eksempel i Dropbox eller OneDrive, så kampene synkes automatisk.
+- **Filer per kamp:** en logg som skrives fortløpende (tåler krasj og strømbrudd), og når kampen er slutt en
+  **Excel-fil** (kamp, lag og roster, alle hendelser, spillerstatistikk) og en JSON-fil med sammendrag.
+- **Kamparkiv:** under **Resultater → Kamparkiv** ser du alle kampene og kan laste ned Excel, JSON eller loggen,
+  også for kampen som pågår. **Samlet statistikk** lager én Excel-fil på tvers av alle kampene, med toppscorere,
+  kort, utvisninger og lagtabell.
+- **Angre** sletter ingenting fra loggen. Handlingen markeres som angret, og statistikken følger det endelige
+  resultatet.
+- Er PIN satt, kreves den også for kamparkivet.
+- Får ikke Scoreboard lagret i kampmappen (for eksempel en nettverksmappe som er borte), vises
+  «Kampjournal lagres ikke» øverst i kontrollpanelet. Opptil 10 000 linjer holdes i minnet og lagres når mappen er
+  tilgjengelig igjen, så lenge programmet ikke avsluttes. Blir det flere, forsvinner de eldste, og loggen får en
+  linje om hvor mange som mangler.
+
 ## Paintball
 - Et poeng heter «Base». Når base trykkes, stopper klokka og venter på dommeren: **Godkjenn**, **No point** eller **Reverser**.
 - **Split deck / back-to-back:** to kamper med fire lag spiller annenhver gang, med felles kampklokke.
