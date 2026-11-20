@@ -32,11 +32,25 @@ Eget panel per deck, **FX A** og **FX B**, med tre plasser i kjede: **ECHO**, **
 
 ## Spillelister
 - Legg til filer eller mapper med undermapper. Samme låt legges ikke inn to ganger.
-- Låter som leses inn, analyseres ikke av seg selv, så selv 10 000 låter leses inn raskt.
+- **Collection** har alle låtene dine, og **Nylig spilt** fylles av det du spiller. Collection og Nylig spilt lages av programmet og kan ikke slettes. Under **Historikk** får hver dag sin egen liste med klokkeslett.
+- Låter som leses inn, analyseres ikke av seg selv, så selv store samlinger leses inn raskt. Linja «Analyse» viser hvor mange som er analysert, og «Analyser alle» tar resten i bakgrunnen.
 - Dra en låt for å flytte den, eller slipp den på en annen spilleliste. Merk flere med Ctrl/Cmd og Shift.
-- Høyreklikk: Vis i Utforsker/Finder, Kopier sti, Rediger tagger, Analyser, Analyser på nytt og Fjern fra listen.
-- Velg kolonner, filtrer på video, musikk og karaoke, og søk i filnavn og tagger.
+- Høyreklikk: Vis i Utforsker/Finder, Kopier sti, Rediger tagger, Analyser, Analyser på nytt og Fjern fra listen. Under Type kan typen velges for hånd, for eksempel Karaoke for en karaokevideo.
+- Velg kolonner, filtrer på video, musikk og karaoke, og vis listen i fullskjerm. **Duplikater** viser bare låter som finnes flere ganger.
+- **Søk** finner alle ordene i filnavn og tagger, uten å bry seg om aksenter. Enter søker i hele Collection. Eksempler: `"take on me"`, `-live`, `house|techno`, `artist:abba`, `bpm:120-128`, `toneart:8A+` (det som passer harmonisk). Hold musa over søkefeltet for alle mulighetene.
 - **Automix** (Innstillinger): 20 sekunder før slutt starter det andre decket, og neste låt lastes.
+
+## Karaoke
+Spillelistene har egne grupper for **Karaoke: venteliste** og **Karaoke: sangere**. Høyreklikk på en karaoke-låt og velg **Sett på venteliste for** en sanger, eller **Lagre på sanger**, så har hver sanger sin egen liste neste gang.
+
+## Forslag
+- Panelet **Forslag** til høyre for spillelisten viser låter du har som passer etter låta som spiller: BPM innenfor ±6 % (også halv og dobbel takt), toneart etter Camelot-hjulet og sjanger. Låter som er spilt i kveld, hoppes over.
+- Topplister (Apple Music Norge, Deezer, Last.fm Norge og den norske DJ-listen fra Dee Jay Promotions) og lignende artister og låter fra Deezer og Last.fm gir forslagene høyere plass.
+- **Tjenester** viser topplistene og lignende låter, og søker i Deezer og Last.fm. Låter du har, kan lastes rett i et deck.
+- Innstillinger → Forslag…: slå av henting fra nettet, eller legg inn din egen gratis Last.fm-nøkkel.
+
+## Import fra Traktor
+Innstillinger → Data og filer → Traktor henter spillelistene og historikken fra Traktor. Velg hvilke lister som skal med. Samme import kan gjøres igjen uten at noe kommer dobbelt. BPM, cue og hotcues tas ikke med.
 
 ## Lydkort og hodetelefoner
 Velg lydkort under Innstillinger → Lydkort. Master og hodetelefonene går ut på hvert sitt kanalpar, for eksempel 1/2 og 3/4. CUE over kanalfaderen sender kanalen til hodetelefonene, og panelet «Hodetelefoner» har MIX og volum.
@@ -52,6 +66,12 @@ Velg lydkort under Innstillinger → Lydkort. Master og hodetelefonene går ut p
 - **Nettside:** vises når master ikke har bilde. Lenken legges inn i panelet «Master». Digital signage (digitalsigns.no) får fast enhets-ID `hqmaestro_<maskinnavn>`.
 - **HQ Maestro Videoboard:** klipp fra Videoboard kan vises oppå masterbildet (Innstillinger → Videoboard).
 
+## «Artist – Tittel» i OBS
+Innstillinger → OBS-tekst → slå på nettsiden. Legg adressen (`http://127.0.0.1:8797/`) inn som **Nettleser**-kilde i OBS, 1920×1080. Bakgrunnen er gjennomsiktig, og teksten kommer når en låt spiller og høres. «Vis også i master-bildet» tegner den samme teksten nederst i masterbildet. Utseendet kan endres i adressen, for eksempel `?side=hoyre`, `?skala=1.2` og `?farge=ff3d81`.
+
+## Lys etter musikken (HQ Maestro Lightpad)
+Innstillinger → Lightpad → **Send takt og energi til Lightpad**, med IP-adressen til maskinen Lightpad kjører på (`127.0.0.1` er denne). Slå på «Musikk fra HQ Maestro Live» i Lightpad også. Da følger lyset i ShowXpress takten og energien i musikken. «Lys» i verktøylinja viser om Lightpad tar imot.
+
 ## Utseende og språk
 - **Skins** (Innstillinger → Skin og «Skin-editor…»): endre alle fargene og legg bakgrunnsbilder bak panelene. Del som `.hqskin`.
 - **Språk** (Innstillinger → Språk og «Oversetter…»): lag ditt eget språk og del det som `.hqsprak`. En engelsk språkfil følger med i pakken.
@@ -62,7 +82,9 @@ Analyser, hotcues, spillelister og oppsett lagres på maskinen:
 - Windows: `%APPDATA%\HQ Maestro Live\data\`
 - Mac: `~/Library/Application Support/HQ-Maestro-Live/`
 
-**Til en annen disk eller maskin:** kopier låtene og datamappen, og velg den nye plasseringen under Innstillinger → Data og filer → Musikkmappe → «Endre plassering…». Analysene, cue og hotcues følger med, så ingenting må analyseres på nytt. Under Data og filer kan du også ta sikkerhetskopi og importere.
+Analysene lagres også i mappa `_HQ Maestro Live_` på roten av disken med musikken, så de følger en ekstern disk mellom PC og Mac.
+
+**Til en annen disk eller maskin:** kopier låtene og datamappen (eller legg datamappen på disken med låtene: Data og filer → Datamappe), og velg den nye plasseringen under Innstillinger → Data og filer → Musikkmappe → «Endre plassering…». Analysene, cue og hotcues følger med, så ingenting må analyseres på nytt. Under Data og filer kan du også ta sikkerhetskopi og importere.
 
 Loggfila finnes med Innstillinger → Åpne loggmappen.
 
