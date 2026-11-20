@@ -24,11 +24,18 @@ Klientene installeres med `install-windows.ps1` fra pakken (`-Rolle Klient` med 
 ## Admin
 - **Legg til PC:** navn, `vert:port`, token og fingerprint. «Hent fingerprint» viser den: sammenlign med `"E-Sport Updater Klient.exe" status` på PC-en.
 - **Søk i LAN:** finner klientene. Fingerprint må bekreftes for hver PC.
-- **Spill:** status, oppdater, avinstaller og installer nye spill (Steam appid / Epic AppName). «📂 Velg mappe …» viser diskene med ledig plass.
+- **Spill:** status, oppdater, avinstaller og installer nye spill (Steam appid / Epic AppName). «📂 Velg mappe …» viser diskene med ledig plass. **Reparer** kontrollerer alle filene i et spill med en gang.
+- **⬆ Oppdateringer** (øverst, med antall): alt som må oppdateres på alle PC-ene, både spill, NVIDIA-driver, programmer og klienten, med installert og nyeste versjon og årsaken hvis en oppdatering feilet. «Oppdater» per linje, eller «Oppdater alt». PC-lista viser det samme kort, og merker PC-er som ikke er sjekket siste døgn.
+- **Nye forsøk:** en Steam- eller Epic-oppdatering som feiler, prøves opptil tre ganger, og filene kontrolleres fra andre forsøk. Feil innlogging, full disk og «eier ikke spillet» prøves ikke på nytt.
 - **Kontoer:** Steam-brukernavn og passord per PC eller på alle samtidig. Epic: **Klubbkonto** (admin logger inn én gang) eller **Egen konto** per PC.
-- **👥 Kontoer** øverst: alle PC-er med konto og status. Steam Guard-kode skrives rett i listen. **Importer fra Excel** leser én rad per PC (malen kan lagres fra admin). Kontoene testes én om gangen, så Steam ikke sperrer.
+- **👥 Kontoer** øverst: alle PC-er med konto og status. Steam Guard-kode skrives rett i listen.
+- **Importer fra Excel** (malen lagres med **📥 Excel-mal**): én rad per PC med Steam, Epic, Battle.net, Riot og Windows-bruker. Arket «Andre kontoer» tar andre tjenester.
+  - Nye Steam-kontoer sendes til PC-ene og testes én om gangen, så Steam ikke sperrer.
+  - PC-er med egen Epic-konto i arket logges inn én etter én. «Hopp over» går til neste. Admin sier fra hvis nettleseren var logget inn med en annen e-post enn den i arket.
+  - Passord for alt annet enn Steam lagres bare kryptert i admin, og vises under **🔑 Passord** per PC (Vis og Kopier).
 - **Programmer:** installer, oppdater og avinstaller programmer med Chocolatey, på én PC eller alle.
 - **Agent-innstillinger:** sjekkintervall og automatisk oppdatering i et tidsvindu (standard 03–07). «Bruk på alle tilkoblede PCer».
+- **Oppdater klienter:** admin henter den nye klienten selv, fra sin egen mappe eller fra nettet, og kontrollerer signaturen.
 - **Eksporter/Importer:** PC-liste, fingerprints og valgfritt tokens, kryptert med passord.
 - **Innstillinger → Start ved innlogging** starter admin minimert.
 
