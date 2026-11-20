@@ -33,6 +33,7 @@ Under **Sport** velger du sport. Det fyller inn standardreglene, som du kan just
 **Race to** og **mercy** (avgjort ved N poengs ledelse) gjelder alle sporter med poeng.
 
 ## Kamp
+- Øverst i Kamp-fanen kan du bytte sport (**⇄ Bytt sport**). Klikk på spilletiden eller pausetiden for å endre sifrene direkte.
 - Mål (med målscorer), gule og røde kort, bytter og straffer legges i hendelseslista og vises som overlegg.
 - **Angre** (Ctrl+Z) går tilbake ett steg om gangen, også etter «Nullstill kamp».
 - Tilstanden lagres hele tiden, og klokka går riktig videre etter en omstart eller et strømbrudd.
@@ -42,11 +43,13 @@ Under **Sport** velger du sport. Det fyller inn standardreglene, som du kan just
 - Før et poeng: «10 sekunder», pip hvert sekund og «GO».
 - 60 sekunder igjen av spilletiden, og påminnelser i pausen.
 - Egne lydfiler legges inn under Innstillinger → Lyd (mp3, wav, ogg, m4a). Uten fil brukes pip og norsk tale.
+- Lyden spilles i kontrollpanelet (🔊 øverst), og på stadionskjermen hvis det er slått på (eller med `/display?sound=1`).
 
 ## Kampprogram og resultater
 - **Program:** importer kampprogrammet fra Excel/CSV (last ned malen). «Hent neste kamp» lagrer resultatet og henter neste kamp med lag og format.
 - **Resultater:** hver kamp logges når den avsluttes, og kan eksporteres til Excel.
-- **Nedtelling før kampstart:** sett «Kampstart om» (for eksempel 40:00) og trykk Start.
+- **Nedtelling før kampstart:** sett «Kampstart om» (for eksempel 40:00) og trykk Start, eller skriv inn klokkeslettet under **Kampstart kl.**, så teller skjermene ned til det.
+- **Gjenoppta:** ble kampen avsluttet fordi feil lag fikk poenget, trykk «Start spillet igjen». Poenget kan flyttes til det andre laget med ⇄ i hendelseslista.
 
 ## Kampjournal (alle kampdata)
 Fra versjon 0.6.7b lagres alt som skjer i hver kamp automatisk, mens kampen pågår. Du trenger ikke slå noe på.
@@ -70,8 +73,9 @@ Fra versjon 0.6.7b lagres alt som skjer i hver kamp automatisk, mens kampen påg
   linje om hvor mange som mangler.
 
 ## Paintball
-- Et poeng heter «Base». Når base trykkes, stopper klokka og venter på dommeren: **Godkjenn**, **No point** eller **Reverser**.
-- **Split deck / back-to-back:** to kamper med fire lag spiller annenhver gang, med felles kampklokke.
+- Et poeng heter «Base». Når base trykkes, stopper klokka og venter på dommeren: **Godkjenn**, **No point** (poenget spilles på nytt) eller **Reverser** (poenget går til motstanderen). «Kast flagget» gir motstanderen poenget med en gang.
+- **Split deck / back-to-back:** to kamper med fire lag spiller annenhver gang. Under Lag og Roster velger du Kamp A eller Kamp B, og «Bytt kamp» henter den andre kampen med egne lag og egen stilling. Kampklokka er felles: den stopper ved base, og etter dommerens avgjørelse telles pausen ned (10 sekunder, pip og GO). Når tiden er ute, er begge kampene slutt.
+- **Skjermen ved dommertårnet** (under Regler): A-siden vises til høyre, og lagene bytter plass på skjermen ved sidebytte.
 - Pit- og dommerskjermer:
 
 | Adresse | Hva |
