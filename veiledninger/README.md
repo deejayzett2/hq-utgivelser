@@ -4,6 +4,7 @@ Kort om hvert program fra Nes IT-Hjelper og hvordan det brukes. Alle installeres
 
 | Program | Hva |
 |---|---|
+| [HQ Launcher](hq-launcher.md) | Installerer, oppdaterer og starter alle programmene |
 | [HQ Maestro Live](hq-live.md) | DJ-program for musikkvideoer, musikk og CD+G-karaoke |
 | [HQ Maestro Alfa](hq-alfa.md) | Videoklipp med gjennomsiktig bakgrunn (WebM med alfa) |
 | [HQ Maestro Videoboard](hq-videoboard.md) | Soundboard for video, med OBS og Stream Deck |
