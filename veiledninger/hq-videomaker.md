@@ -32,14 +32,21 @@ Uten API-nøkkel brukes bare stillbilder fra **Openverse**. En gratis nøkkel fr
 | Instagram stående 4:5 | 1080×1350 |
 | Instagram kvadrat 1:1 | 1080×1080 |
 
-Når bildet beskjæres til et annet format, holdes personene i bildet.
+Når bildet beskjæres til et annet format, holdes personene i bildet. Nye bilder analyseres når de importeres. Bilder som lå i prosjektet fra før, analyseres med **Analyser bilder (finn personer)**.
 
 ## Redigering
-- **Importer medier…** eller **Importer mappe…** legger til egne bilder, video og lyd. Dra dem til tidslinja.
+- **Importer medier…** eller **Importer mappe…** legger til egne bilder, video og lyd. Dra dem til tidslinja, eller høyreklikk i mediepanelet: **Legg til ved spillehodet** eller **Bruk som lydspor**.
 - Tidslinja viser takt- og slagstolper. Klipp kan festes til nærmeste takt.
 - **S** eller ⌘K deler ved spillehodet, Backspace sletter, Shift+Backspace sletter og lukker hullet. Klipp ut, kopier, lim inn og erstatt virker som vanlig. På Windows brukes Ctrl i stedet for ⌘.
 - Hvert klipp har fart, skala, posisjon, rotasjon, opasitet, beskjæring og Ken Burns (langsom zoom), med keyframes.
 - **Effekter:** fargegradering (eksponering, kontrast, metning, gamma, temperatur, tint), vignett, uskarphet, blits og tone inn/ut.
+
+## Eksport
+**Fil → Eksporter video…** (⌘E / Ctrl+E) lager en MP4-fil (H.264 og AAC).
+- **Format:** kan byttes rett før eksport. Det endrer formatet på prosjektet, men kan angres.
+- **Kvalitet:** lavere tall gir bedre bilde og større fil (19 er standard).
+- **Koder:** på Mac kan VideoToolbox bruke videobrikken i maskinen, og det går raskest.
+- **Hastighet:** raskere eksport gir litt større fil med samme kvalitet.
 
 ## Verktøy
 Samme verktøy og snarveier som i After Effects og Premiere:
