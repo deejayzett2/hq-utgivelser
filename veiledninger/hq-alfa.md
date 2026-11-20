@@ -10,8 +10,8 @@ Videosnutter i **WebM med alfakanal**, by Nes IT-Hjelper. Importer video, bilder
 3. Dobbeltklikk et medium, eller dra det til tidslinja. Video og bilder havner på videospor, lyd på lydspor.
 4. Velg klippet, og velg **Fjern bakgrunn** i egenskapspanelet til høyre:
    - **Grønnskjerm:** fjerner en farge. Bruk **Pipette** og klikk på bakgrunnen. Juster Toleranse, Myke kanter og Fjern fargesøl.
-   - **AI (finn personen):** finner personen i hvert bilde, også uten grønnskjerm. Juster Terskel og Myke kanter på bildet du står på, og trykk **Lag maska for hele klippet** når det ser riktig ut. «Nøyaktig» er standard, «Rask» er raskere, men mister lettere ansikter.
-   - **Masker** (pennen ✒, P): tegn en bane på klippet. **Klippebane** viser bare det innenfor, **Behold alltid** henter tilbake noe AI-en tok, og **Fjern alltid** tar bort det innenfor. Banen kan animeres med keyframes.
+   - **AI (finn personen):** finner personen i hvert bilde, også uten grønnskjerm. Juster Terskel og Myke kanter på bildet du står på, og trykk **Lag maska for hele klippet** når det ser riktig ut. Maska lages i bakgrunnen (fremdrift nederst) og huskes. «Nøyaktig» er standard, «Rask» er raskere, men mister lettere ansikter. «Følg kantene i bildet» gir skarpere kanter.
+   - **Masker** (pennen ✒, P): tegn en bane på klippet. Klikk for hjørner, klikk og dra for myke kurver, og klikk på første punkt for å lukke. **Klippebane** viser bare det innenfor, **Behold alltid** henter tilbake noe AI-en eller grønnskjermen tok (for eksempel et hull i jakka), og **Fjern alltid** tar bort det innenfor. Velg Inverter og Myk kant, og ⏱ ved «Bane» for å animere banen med keyframes.
 5. **Fil → Eksporter klipp** (⌘E / Ctrl+E): WebM med alfa (til Videoboard) eller ProRes 4444 (til redigeringsprogrammer). Det som ikke dekkes av et klipp, blir gjennomsiktig.
 
 Forhåndsvisningen viser ruter bak det gjennomsiktige (kan byttes til svart, hvit eller grønn under «Bakgrunn»).
@@ -30,13 +30,14 @@ Samme verktøy og snarveier som i After Effects og Premiere:
 | Rotasjon | W | Roter valgt klipp (Shift: 15° om gangen) |
 | Beskjær | R | Dra kantene på valgt klipp |
 
-**Skill lyd fra video** (⌘L / Ctrl+L): lyden blir et eget klipp på et lydspor.
+**Skill lyd fra video** (⌘L / Ctrl+L): lyden blir et eget klipp på et lydspor. En video kan også slippes rett på et lydspor for å bruke bare lyden.
 
 ## Redigering
 - Dra klipp for å flytte, dra kantene for å trimme. **S** eller ⌘K deler ved spillehodet, Backspace sletter, Shift+Backspace sletter og lukker hullet.
 - Klipp ut, kopier og lim inn (⌘X/C/V), angre og gjør om (⌘Z / Shift+⌘Z). På Windows brukes Ctrl.
 - Hvert klipp har lydnivå, fart, passform, skala, posisjon, rotasjon og opasitet med keyframes, beskjæring og effekter (fargegradering, vignett, uskarphet, blits, tone inn/ut).
 - 🔊 ved sporet slår lyden av, 👁 skjuler et videospor.
+- **Prosjekt:** Fil → Lagre (⌘S / Ctrl+S) lagrer prosjektet som `.hqalfa`, med masker og keyframes, så du kan åpne det og fortsette senere (Fil → Åpne prosjekt…, ⌘O / Ctrl+O).
 
 ## Grafikkort
 På Windows brukes grafikkortet til AI-maskene. Har maskinen flere grafikkort, velges kortet under Innstillinger (standard: det raskeste).
