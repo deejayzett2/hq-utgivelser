@@ -17,6 +17,10 @@ Legg til en kilde av typen **Nettleser** øverst i scenen:
 - Bredde 1920, høyde 1080
 - Kryss av for **Styr lyd via OBS**, så lyden kommer i mikseren
 
+Statuslinja nederst i programmet viser adressen, med **Kopier**. Bruk `127.0.0.1` når OBS er på samme maskin: den endrer seg ikke når nettverket gjør det.
+
+**OBS på en annen maskin:** slå på **Tillat andre maskiner i nettverket** (Innstillinger → Rutenett og server). Statuslinja viser da også **Nettverk:** med IP-adressen til maskinen, for eksempel `http://192.168.1.20:8790`. Den egne Kopier-knappen gir overlay-adressen til OBS, `http://192.168.1.20:8790/overlay`. Vanlig lokalt nett vises først. Har maskinen flere adresser, for eksempel VPN, ser du dem ved å holde musa over adressen. Står det «fant ingen IP-adresse», er maskinen ikke koblet til et nettverk.
+
 **Master** i programmet viser det samme bildet som overlayet, og kan åpnes i eget vindu (fullskjerm med dobbeltklikk eller F).
 
 ## NDI (Windows)
@@ -45,7 +49,7 @@ Dra **System → Website** til en knapp, lim inn adressen og kryss av for **GET 
 Pad 1 er øverst til venstre. Hver pad viser adressen sin i redigeringen, med Kopier-knapp.
 
 ## Kontrollpanel og mobil
-`http://127.0.0.1:8790/` viser padsene som nettside. Med **Tillat andre maskiner i nettverket** (Innstillinger → Rutenett og server) kan mobil, nettbrett og en egen strømme-PC bruke adressen som vises nederst i programmet (IP-adressen til maskinen).
+`http://127.0.0.1:8790/` viser padsene som nettside. Med **Tillat andre maskiner i nettverket** (Innstillinger → Rutenett og server) kan mobil, nettbrett og en egen strømme-PC bruke adressen bak **Nettverk:** nederst i programmet. Stream Deck på en annen maskin bruker også den adressen i stedet for `127.0.0.1`.
 
 ## HQ Maestro Live
 Klippene kan også vises oppå masterbildet i HQ Maestro Live (Innstillinger → Videoboard i Live).
