@@ -33,6 +33,21 @@ Når Lightpad starter, settes alle masterfaderne helt ned, og MIDI-faderne på 0
 - **Enhetsfarger:** hver enhet har sin egen farge, og enhetslisten over padsene framhever knappene til en enhet.
 - **Nye fadere:** velg en fader under ✏ Rediger og trykk **Ny masterfader fra enhetene i showet**. Lightpad viser hver enhet og kanal med DMX-adresser. Finnes det allerede en masterfader for den, brukes den. Ellers legger Lightpad den inn i ShowXpress, med sikkerhetskopi. **ShowXpress må være lukket** mens det skjer, og startes igjen etterpå.
 
+## Musikk fra HQ Maestro Live
+Lyset kan følge musikken som spilles i **HQ Maestro Live**: tempoet, energien og overgangene i låtene.
+
+1. **I Lightpad:** ⚙ Innstillinger → **Musikk fra HQ Maestro Live …** → kryss av for *Lyset følger musikken fra HQ Maestro Live*.
+2. **I HQ Maestro Live:** Innstillinger → Lightpad → **Send takt og energi til Lightpad**. Skriv inn IP-adressen til maskinen Lightpad kjører på (`127.0.0.1` hvis det er samme maskin). Kjører Lightpad på en annen maskin, må *Tillat mobiler og nettbrett* være på i Lightpad.
+3. Vinduet i Lightpad viser BPM og energi når den tar imot. Live viser om Lightpad svarer og er koblet til ShowXpress.
+
+Hva musikken kan styre (hver del slås av og på for seg):
+- **Tempo i takt:** BPM tap i ShowXpress på hvert slag. Auto-BPM i ShowXpress kan slås av når musikken starter.
+- **Masterfadere etter energien:** velg hvilke fadere som skal følge med, og sett min (rolige partier), maks (det kraftigste) og hvile (når musikken stopper).
+- **Puls på slaget:** et kort løft i faderne på hvert slag.
+- **Drop og break:** en knapp i ShowXpress trykkes når musikken går fra rolig til kraftig (drop), eller motsatt (break). Følsomheten bestemmer hvor ofte.
+
+Flytter du en fader for hånd, får du styre den selv i 10 sekunder. Stopper musikken, eller Live forsvinner, slippes knappen og faderne går til hvile.
+
 ## Stream Deck og andre
 | Adresse | Hva |
 |---|---|
